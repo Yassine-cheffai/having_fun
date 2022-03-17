@@ -84,3 +84,7 @@ def test_problem11():
 def test_problem12():
     fib_seq = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
     assert Solution.problem_12() == fib_seq
+
+
+def test_problem13():
+    assert Solution.problem_13(5) == 120

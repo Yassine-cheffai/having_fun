@@ -77,3 +77,10 @@ class Solution:
             result.append(new_value)
 
         return result
+
+    @staticmethod
+    def problem_13(number: int) -> int:
+        sum = 1
+        for i in range(1, number + 1):
+            sum *= i
+        return sum
