@@ -74,3 +74,13 @@ def test_problem10(capsys):
     expected_result = "0\n1\n2\n3\n4\n5\nDone!\n"
 
     assert out == expected_result
+
+
+def test_problem11():
+    expected_result = [29, 31, 37, 41, 43, 47]
+    assert Solution.problem_11(25, 50) == expected_result
+
+
+def test_problem12():
+    fib_seq = [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+    assert Solution.problem_12() == fib_seq

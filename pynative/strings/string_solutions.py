@@ -1,5 +1,12 @@
 class Solution:
     @staticmethod
+    def isprime(number: int) -> bool:
+        for i in range(2, number):
+            if number % i == 0:
+                return False
+        return True
+
+    @staticmethod
     def problem_2():
         i = 1
         while i <= 5:
@@ -51,3 +58,22 @@ class Solution:
             print(i)
         else:
             print("Done!")
+
+    @staticmethod
+    def problem_11(start: int, end: int) -> list:
+        result = []
+        for i in range(start, end + 1):
+            if Solution.isprime(i):
+                result.append(i)
+
+        return result
+
+    @staticmethod
+    def problem_12() -> list:
+        result = [0, 1]
+        while len(result) < 10:
+            last_index = len(result) - 1
+            new_value = result[last_index] + result[last_index - 1]
+            result.append(new_value)
+
+        return result
