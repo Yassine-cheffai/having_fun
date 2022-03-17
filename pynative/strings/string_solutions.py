@@ -84,3 +84,7 @@ class Solution:
         for i in range(1, number + 1):
             sum *= i
         return sum
+
+    @staticmethod
+    def problem_14(number: int) -> int:
+        return int("".join(list(reversed(str(number)))))

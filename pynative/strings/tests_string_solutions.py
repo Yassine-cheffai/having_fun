@@ -88,3 +88,7 @@ def test_problem12():
 
 def test_problem13():
     assert Solution.problem_13(5) == 120
+
+
+def test_problem14():
+    assert Solution.problem_14(76542) == 24567
