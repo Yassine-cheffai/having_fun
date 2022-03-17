@@ -34,3 +34,43 @@ def test_problem_5(capsys):
     expected_result = "75\n150\n145\n"
 
     assert out == expected_result
+
+
+def test_problem_6():
+    assert Solution.problem_6(75869) == 5
+
+
+def test_problem_7(capsys):
+    Solution.problem_7()
+    expected_result = "5 4 3 2 1\n4 3 2 1\n3 2 1\n2 1\n1\n"
+    captured = capsys.readouterr()
+    out = captured.out
+    assert out == expected_result
+
+
+def test_problem_8(capsys):
+    input_list = [10, 20, 30, 40, 50]
+    Solution.problem_8(input_list)
+    captured = capsys.readouterr()
+    out = captured.out
+    expected_result = "50\n40\n30\n20\n10\n"
+
+    assert out == expected_result
+
+
+def test_problem_9(capsys):
+    Solution.problem_9()
+    captured = capsys.readouterr()
+    out = captured.out
+    expected_result = "-10\n-9\n-8\n-7\n-6\n-5\n-4\n-3\n-2\n-1\n"
+
+    assert out == expected_result
+
+
+def test_problem10(capsys):
+    Solution.problem_10()
+    captured = capsys.readouterr()
+    out = captured.out
+    expected_result = "0\n1\n2\n3\n4\n5\nDone!\n"
+
+    assert out == expected_result
