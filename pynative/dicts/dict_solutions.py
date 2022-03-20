@@ -16,3 +16,13 @@ class Solution:
     @staticmethod
     def exercise_4(employees: List[str], default: Dict) -> Dict[str, Dict]:
         return dict.fromkeys(employees, default)
+
+    @staticmethod
+    def exercise_5(sample_dict: Dict, keys: List[str]) -> Dict:
+        return {k: sample_dict[k] for k in keys}
+
+    @staticmethod
+    def exercise_6(sample_dict: Dict, keys: List[str]) -> Dict:
+        for key in keys:
+            sample_dict.pop(key)
+        return sample_dict

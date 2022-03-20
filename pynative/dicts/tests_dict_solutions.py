@@ -25,3 +25,24 @@ def test_exercise_4():
     defaults = {"designation": "Developer", "salary": 8000}
 
     assert Solution.exercise_4(employees, defaults) == expected_result
+
+
+def test_exercise_5():
+    sample_dict = {"name": "Kelly", "age": 25, "salary": 8000, "city": "New york"}
+
+    # Keys to extract
+    keys = ["name", "salary"]
+
+    expected_result = {"name": "Kelly", "salary": 8000}
+
+    assert Solution.exercise_5(sample_dict, keys) == expected_result
+
+
+def test_exercise_6():
+    sample_dict = {"name": "Kelly", "age": 25, "salary": 8000, "city": "New york"}
+
+    # Keys to remove
+    keys = ["name", "salary"]
+    expected_result = {"city": "New york", "age": 25}
+
+    assert Solution.exercise_6(sample_dict, keys) == expected_result
