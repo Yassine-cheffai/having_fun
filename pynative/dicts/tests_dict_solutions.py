@@ -46,3 +46,25 @@ def test_exercise_6():
     expected_result = {"city": "New york", "age": 25}
 
     assert Solution.exercise_6(sample_dict, keys) == expected_result
+
+
+def test_exercise_8():
+    # rename dict key
+    sample_dict = {"name": "Kelly", "age": 25, "salary": 8000, "city": "New york"}
+    key = "city"
+    new_key = "location"
+    expected_result = {
+        "name": "Kelly",
+        "age": 25,
+        "salary": 8000,
+        "location": "New york",
+    }
+
+    assert Solution.exercise_8(sample_dict, key, new_key) == expected_result
+
+
+def test_exercise_9():
+    sample_dict = {"Physics": 82, "Math": 65, "history": 75}
+
+    expected_result = "Math"
+    assert Solution.exercise_9(sample_dict) == expected_result

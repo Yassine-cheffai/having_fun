@@ -26,3 +26,12 @@ class Solution:
         for key in keys:
             sample_dict.pop(key)
         return sample_dict
+
+    @staticmethod
+    def exercise_8(sample_dict: Dict, key: str, new_key: str) -> Dict:
+        sample_dict[new_key] = sample_dict.pop(key)
+        return sample_dict
+
+    @staticmethod
+    def exercise_9(sample_dict: Dict) -> str:
+        return min(sample_dict, key=sample_dict.get)
