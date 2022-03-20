@@ -1,4 +1,4 @@
-from string_solutions import Solution
+from loop_solutions import Solution
 
 
 def test_problem_2(capsys):
