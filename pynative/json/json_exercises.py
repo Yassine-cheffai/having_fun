@@ -12,6 +12,11 @@ class Vehicle:
     def as_json(self):
         return json.dumps(self.__dict__, indent=2)
 
+    @classmethod
+    def from_json(cls, input_json: str):
+        data = json.loads(input_json)
+        return cls(name=data["name"], engine=data["engine"], price=data["price"])
+
 
 def exercise_1(data: Dict[str, str]) -> str:
     return json.dumps(data)

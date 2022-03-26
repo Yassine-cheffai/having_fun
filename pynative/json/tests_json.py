@@ -36,3 +36,9 @@ def test_exercise_6():
     )
     vehicle = json_exercises.Vehicle("Toyota Rav4", "2.5L", 32000)
     assert vehicle.as_json() == expected_result
+
+
+def test_exercise_7():
+    input_json = '{ "name": "Toyota Rav4", "engine": "2.5L", "price": 32000 }'
+    v = json_exercises.Vehicle.from_json(input_json)
+    assert v.name == "Toyota Rav4" and v.engine == "2.5L" and v.price == 32000
