@@ -1,5 +1,6 @@
 from typing import Union  # because the or operator | need python 3.10
 from dataclasses import dataclass
+import math
 
 
 @dataclass
@@ -35,9 +36,21 @@ class Vector:
         else:
             raise TypeError("operand must be Vector, int or float")
 
+    def __truediv__(self, other):
+        if isinstance(other, (int, float)):
+            return Vector(x=self.x / other, y=self.y / other, z=self.z / other)
+        else:
+            raise TypeError("operand must be int or float")
 
-test = Vector(3, 5, 9) * Vector(1, -3, 2)
-print(test)
+    def get_magnitude(self):
+        return math.sqrt(self.x**2 + self.y**2 + self.z**2)
 
-test = Vector(3, 5, 9) * 3
-print(test)
+    def normalize(self):
+        magnitude = self.get_magnitude()
+        return Vector(self.x / magnitude, self.y / magnitude, self.z / magnitude)
+
+
+test = Vector(3, 6, 9)
+print(test.get_magnitude())
+print(test.normalize())
+print(test.normalize().get_magnitude())
