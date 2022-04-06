@@ -48,9 +48,3 @@ class Vector:
     def normalize(self):
         magnitude = self.get_magnitude()
         return Vector(self.x / magnitude, self.y / magnitude, self.z / magnitude)
-
-
-test = Vector(3, 6, 9)
-print(test.get_magnitude())
-print(test.normalize())
-print(test.normalize().get_magnitude())
